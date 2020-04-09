@@ -11,7 +11,7 @@
     android:layout_height="wrap_content" />
     <Button
         android:layout_width="@dimen/buttonWidth"
-        android:text="confirm"
+        android:text="@string/ok"
         android:layout_height="wrap_content" />
 
     <ImageView

@@ -15,4 +15,11 @@
         <item>str5</item>
     </array>
 
+    <string-array name="countries">
+        <item>Belgium</item>
+        <item>str</item>
+        <item>str1</item>
+        <item>spain</item>
+
+    </string-array>
 </resources>

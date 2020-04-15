@@ -27,7 +27,7 @@ ProgressBar progressBar;
      Thread thread=new Thread(){
          public  void run(){
              int i=0;
-             while(i<100){
+             while(i<=100){
                 progressBar.setProgress(i) ;
                  try{
                      Thread.sleep(1000);

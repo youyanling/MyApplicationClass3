@@ -2,7 +2,9 @@ package cn.edu.sdwu.android.classroom.sn170507180117;
 
 import android.app.Notification;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -49,6 +51,10 @@ Toast.makeText(this,"toast1",Toast.LENGTH_LONG).show();
         builder.setContentText("message");
         builder.setWhen(System.currentTimeMillis());
         builder.setSmallIcon(android.R.drawable.ic_input_delete);//引用系统的资源
+
+        Intent intent=new Intent(this,Ch6Activity1.class);//点击通知之后跳转的界面
+        PendingIntent pendingIntent=PendingIntent.getActivity(this,101,intent,PendingIntent.FLAG_CANCEL_CURRENT);//这个类代表代办的Intent
+        builder.setContentIntent(pendingIntent);
         //调用build方法完成构造
         Notification notification=builder.build();
         //使用notificationManager,发送通知
